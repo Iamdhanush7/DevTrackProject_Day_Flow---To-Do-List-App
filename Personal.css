@@ -1,0 +1,75 @@
+.work-main-container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 60px;
+  }
+  
+  .tasks-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .task-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pending-work {
+    background-color: #4e2ab0;
+    border-radius: 20px;
+    width: 40%;
+    min-width: 200px; /* Minimum width */
+    padding: 10px;
+  }
+  
+  .completed-work {
+    background-color: #639f59;
+    border-radius: 20px;
+    width: 40%;
+    min-width: 200px; /* Minimum width */
+    padding: 10px;
+  }
+  
+  .work-input {
+    margin-top: 23%;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .work-input input {
+    width: 100%; 
+    height: 40px; 
+    margin-right: 20px; 
+    font-size: 16px; 
+    padding: 10px; 
+    border-radius: 50px;
+    background-color: #ecdc51;
+  }
+
+  .work-input button {
+    width: 20%; 
+    height: 65px; 
+    font-size: 16px; 
+    border-radius: 50px;
+  }
+  
+  .pending-work ul,
+.completed-work ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.pending-work li,
+.completed-work li {
+  margin-bottom: 10px; 
+  text-decoration: underline; 
+  font-size: 20px; 
+}
+
+  

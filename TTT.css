@@ -1,0 +1,312 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 40px 60px;
+    margin-left: 0%;
+    
+  }
+  
+  .navbar-left {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+  }
+  
+  .navbar a:hover {
+    background-color: #EFD342;
+  }
+  .container {
+    background: rgb(151,142,142);
+    background: linear-gradient(90deg, rgba(151,142,142,1) 0%, rgba(50,50,50,1) 35%);
+    margin-left: 0%;
+    width:100%;
+    border-radius: 50px;
+    color: white;
+  }
+  
+  .content {
+    width: 100%;
+    max-width: 1330px;
+    margin: 0 auto;
+  }
+  
+  .add-button {
+    display: grid;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    margin-left: 60%;
+    border-left: 1px solid #D9C200;
+    border-bottom: 1px solid #D9C200;
+  } 
+  
+  .add-button:hover {
+    background-color: #D9C200;
+  }
+  
+  .weekdays-container {
+    display:inline-flex;
+    width: 90%;
+    min-height: 55px;
+    background-color: black;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 3%;
+    border-radius: 30px;
+    margin-left:auto;
+  }
+  
+  .weekday {
+    background-color: #efd242a7;
+    color: black;
+    border: none;
+    padding: 5px 20px;
+    margin: 10px 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 125px;
+  }
+  .weekday:hover {
+    background-color: #D9C200;
+  }
+  
+  .timetable-container {
+    width: 100%;
+    overflow-x: auto
+  }
+  
+  .timetable {
+    width: auto;
+    color: black;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background-color:#ecdc51;
+    margin-left:5%;
+  }
+  
+  .timetable th, .timetable td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .timetable th {
+    background-color: #333;
+    color: white;
+  
+  }
+  .delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .delete-button:focus {
+    outline: none;
+  }
+  
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    max-width: 400px;
+    margin: 30px auto; /* Adjusted margin-bottom */
+    margin-left: 20%;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: none;
+    position: relative;
+  }
+  
+  button[type="submit"] {
+    position: absolute;
+    bottom: 10px;
+    left: 80%;
+    transform: translateX(-50%);
+    margin-top: 5px; 
+    background-color: #D9C200;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background-color: #C5B000;
+  }
+  
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: none;
+    position: relative;
+  }
+  .input-group label {
+    margin-bottom: 5px;
+  }
+  
+  .input-group input[type="text"],
+  .input-group select,
+  .input-group input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #D9C200;
+    border-radius: 25px;
+    color: black;
+  }
+  
+  .input-group input[type="time"] {
+    appearance: none;
+    background-color: #D9C200;
+  }
+  
+  .input-group input[type="time"]::-webkit-calendar-picker-indicator {
+    display:inline-flexbox;
+    transition-delay: 0ms;
+  }
+  
+  .input-group .time-input {
+    width: calc(0% - 5px); 
+  }
+  .input_container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-left: 0;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #day{
+    width:300px;
+    border-radius: 50px;
+    margin-left: 1%;
+  }
+  #subject{
+    width: 300px;
+    border-radius: 50px; 
+  }
+  #startTime,#endTime{
+    width: 70px;
+    height: fit-content;
+    display: flex;
+    border-radius: 50px;
+  }
+  #room{
+    width: 300px;
+    border-radius: 50px;
+    margin-left: 18%;
+  }
+  .input-field {
+    margin: 15px;
+    padding: 12px; 
+    width: 320px; 
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #D9C200;
+    color: black;
+  }
+  
+  
+  
+  .input-field.select {
+    appearance: none; 
+    background-position: right center; 
+    background-repeat: no-repeat; 
+    padding-right: 20px; 
+  }
+  
+  
+  .input-field[type="time"] {
+    appearance: none; 
+    width: 140px; 
+  }
+  
+  .input-field[type="time"]::-webkit-calendar-picker-indicator {
+    display: flex;
+  }
+  .input-wrapper {
+    flex: 1;
+    margin-right: 30px; 
+  }
+  
+  
+  .input-wrapper label {
+    margin-bottom: 5px;
+  }
+  
+  .input-wrapper input[type="text"],
+  .input-wrapper select,
+  .input-wrapper input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #D9C200;
+    color: black;
+  }
+  
+.wwrr{
+  display: flex;
+  flex: 1;
+  gap: 20px;
+}
+  
+  .time-wrapper{
+    flex: 1;
+  }
+  
+  .time-wrapper label{
+    margin-bottom: 5px;
+  }
+  .time-wrapper input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #D9C200;
+    color: black;
+  }
